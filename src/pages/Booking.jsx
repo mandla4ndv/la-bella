@@ -13,12 +13,70 @@ import toast from 'react-hot-toast';
 const STEPS = ['Service', 'Date & Time', 'Your Details', 'Summary', 'Payment'];
 
 const FALLBACK_SERVICES = [
-  { id: '1', name: 'Signature Facial', price: 650, duration: 75, category: 'Facials' },
-  { id: '2', name: 'Microneedling', price: 1200, duration: 90, category: 'Skin Treatments' },
-  { id: '3', name: 'Chemical Peel', price: 850, duration: 60, category: 'Skin Treatments' },
-  { id: '4', name: 'Classic Lash Extensions', price: 750, duration: 120, category: 'Lashes' },
-  { id: '5', name: 'Brow Design & Tint', price: 350, duration: 45, category: 'Brows' },
-  { id: '6', name: 'Volume Lash Extensions', price: 950, duration: 150, category: 'Lashes' },
+  // Facials & Skin Care
+  { id: '1', name: 'LED Facial: Acne & Scarring', price: 200, duration: 30, category: 'Facials' },
+  { id: '2', name: 'LED Facial: Pigmentation', price: 200, duration: 30, category: 'Facials' },
+  { id: '3', name: 'LED Facial: Spider Veins', price: 200, duration: 30, category: 'Facials' },
+  { id: '4', name: 'LED Facial: Skin Rejuvenation', price: 200, duration: 30, category: 'Facials' },
+  { id: '5', name: 'Basic Facial', price: 350, duration: 60, category: 'Facials' },
+  { id: '6', name: 'Basic Facial with Mask/Scrub', price: 400, duration: 60, category: 'Facials' },
+  { id: '7', name: 'Deep Cleansing Facial', price: 450, duration: 60, category: 'Facials' },
+
+  // Hair Removal
+  { id: '8', name: 'Hair Removal: Upper Lip & Chin', price: 200, duration: 30, category: 'Hair Removal' },
+  { id: '9', name: 'Hair Removal: Brazilian', price: 450, duration: 45, category: 'Hair Removal' },
+  { id: '10', name: 'Hair Removal: Half Legs', price: 350, duration: 45, category: 'Hair Removal' },
+  { id: '11', name: 'Hair Removal: Male Back', price: 450, duration: 45, category: 'Hair Removal' },
+  { id: '12', name: 'Hair Removal: Arms', price: 300, duration: 45, category: 'Hair Removal' },
+  { id: '13', name: 'Hair Removal: Face', price: 300, duration: 30, category: 'Hair Removal' },
+  { id: '14', name: 'Hair Removal: Full Legs', price: 500, duration: 60, category: 'Hair Removal' },
+  { id: '15', name: 'Hair Removal: Under Arms', price: 300, duration: 30, category: 'Hair Removal' },
+  { id: '16', name: 'Hair Removal: Anal', price: 550, duration: 30, category: 'Hair Removal' },
+  { id: '17', name: 'Hair Removal: Head', price: 600, duration: 45, category: 'Hair Removal' },
+  { id: '18', name: 'Hair Removal: Chest', price: 400, duration: 45, category: 'Hair Removal' },
+
+  // IPL Treatments
+  { id: '19', name: 'IPL: Acne & Scarring', price: 250, duration: 30, category: 'IPL Treatments' },
+  { id: '20', name: 'IPL: Pigmentation', price: 250, duration: 30, category: 'IPL Treatments' },
+  { id: '21', name: 'IPL: Spider Veins', price: 350, duration: 30, category: 'IPL Treatments' },
+  { id: '22', name: 'IPL: Skin Rejuvenation', price: 350, duration: 30, category: 'IPL Treatments' },
+
+  // Slimming Treatments
+  { id: '23', name: 'Laser Lipo', price: 250, duration: 20, category: 'Slimming Treatments' },
+  { id: '24', name: 'Cavitation', price: 250, duration: 20, category: 'Slimming Treatments' },
+  { id: '25', name: 'Visible Cellulite Reduction', price: 350, duration: 40, category: 'Slimming Treatments' },
+  { id: '26', name: 'Infrared Sauna Blanket', price: 250, duration: 20, category: 'Slimming Treatments' },
+  { id: '27', name: 'Sauna Blanket & Cavitation', price: 450, duration: 40, category: 'Slimming Treatments' },
+  { id: '28', name: 'Fat Freeze', price: 550, duration: 60, category: 'Slimming Treatments' },
+
+  // Non-Surgical Body Contouring
+  { id: '29', name: 'Breast / Bum Augmentation', price: 450, duration: 45, category: 'Body Contouring' },
+  
+  // Skin Tightening
+  { id: '30', name: 'Skin Tightening: Abdomen', price: 400, duration: 60, category: 'Skin Tightening' },
+  { id: '31', name: 'Skin Tightening: Hands', price: 400, duration: 60, category: 'Skin Tightening' },
+  { id: '32', name: 'Skin Tightening: Love Handles', price: 400, duration: 60, category: 'Skin Tightening' },
+  { id: '33', name: 'Skin Tightening: Double Chin', price: 250, duration: 30, category: 'Skin Tightening' },
+  { id: '34', name: 'Skin Tightening: Thighs', price: 400, duration: 60, category: 'Skin Tightening' },
+  { id: '35', name: 'Skin Tightening: Chest', price: 350, duration: 30, category: 'Skin Tightening' },
+  { id: '36', name: 'Skin Tightening: Saddle Bags', price: 400, duration: 60, category: 'Skin Tightening' },
+
+  // Specialized Treatments
+  { id: '37', name: 'Radio Frequency: Anti-Aging', price: 450, duration: 50, category: 'Specialized Treatments' },
+  { id: '38', name: 'Radio Frequency: Wrinkle Reduction', price: 450, duration: 50, category: 'Specialized Treatments' },
+  { id: '39', name: 'Bedroom Vitality (External)', price: 600, duration: 30, category: 'Specialized Treatments' },
+  { id: '40', name: 'Reduction of Scarring & Stretch Marks', price: 400, duration: 30, category: 'Specialized Treatments' },
+  { id: '41', name: 'Laser Hair Regrowth', price: 180, duration: 30, category: 'Specialized Treatments' },
+
+  // Massages
+  { id: '42', name: 'Swedish Relax Massage (Full Body - 60 Min)', price: 550, duration: 60, category: 'Massages' },
+  { id: '43', name: 'Swedish Relax Massage (Full Body - 90 Min)', price: 750, duration: 90, category: 'Massages' },
+  { id: '44', name: 'Swedish Massage: Back & Neck', price: 350, duration: 30, category: 'Massages' },
+  { id: '45', name: 'Swedish Massage: Hand & Foot', price: 250, duration: 30, category: 'Massages' },
+  { id: '46', name: 'Hot Stone Massage (Full Body - 90 Min)', price: 700, duration: 90, category: 'Massages' },
+  { id: '47', name: 'Hot Stone Massage: Back & Neck', price: 400, duration: 30, category: 'Massages' },
+  { id: '48', name: 'Indian Massage (30 Min)', price: 300, duration: 30, category: 'Massages' },
+  { id: '49', name: 'Indian Massage (60 Min)', price: 450, duration: 60, category: 'Massages' }
 ];
 
 function generateTimeSlots(openTime, closeTime, durationMins, bookedSlots = []) {

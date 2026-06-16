@@ -111,13 +111,28 @@ export default function Hero() {
               {/* Main card */}
               <div className="relative w-full aspect-[3/4] bg-gradient-to-b from-rose/15 via-blush/20 to-gold/10 rounded-none overflow-hidden border border-gold/20">
                 {/* Decorative content inside card */}
-                <div className="absolute inset-0 flex flex-col items-center justify-center p-10 text-center">
-                  <Sparkles size={40} className="text-gold mb-6 opacity-60" />
-                  <p className="font-display text-4xl text-charcoal mb-4 italic">Beauty is an art,</p>
-                  <p className="font-display text-4xl text-rose">we are the artists.</p>
-                  <div className="gold-divider mt-8" />
-                  <p className="text-sm text-warm-gray font-body font-300 mt-4">Premium Aesthetic Treatments</p>
-                </div>
+                {/* 1. Parent Wrapper MUST have 'relative' and a defined height */}
+<div className="relative w-full h-[600px] overflow-hidden">
+  
+  {/* 2. THE BACKGROUND IMAGE */}
+  <img 
+    src="public/images/desk.jpg" 
+    alt="Aesthetic Background" 
+    className="absolute inset-0 w-full h-full object-cover" 
+  />
+
+  {/* Optional: Add a slight white/pink tint overlay so your text is easy to read */}
+  <div className="absolute inset-0 bg-white/40 backdrop-blur-[2px]"></div>
+
+  {/* 3. YOUR TEXT CONTENT (I added z-10 so it stays above the image) */}
+  <div className="absolute inset-0 flex flex-col items-center justify-center p-10 text-center z-10">
+    <Sparkles size={40} className="text-gold mb-6 opacity-60" />
+    <p className="font-display text-4xl text-charcoal mb-4 italic">Beauty is an art,</p>
+    <p className="font-display text-4xl text-charcoal ">we are the artists.</p>
+    <div className="gold-divider mt-8" />
+    <p className="text-sm text-charcoal font-body font-300 mt-4">Premium Aesthetic Treatments</p>
+  </div>
+</div>
                 {/* Corner decorations */}
                 <div className="absolute top-4 left-4 w-8 h-8 border-t border-l border-gold/40" />
                 <div className="absolute top-4 right-4 w-8 h-8 border-t border-r border-gold/40" />

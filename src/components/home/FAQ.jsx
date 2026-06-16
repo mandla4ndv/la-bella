@@ -7,9 +7,9 @@ const FAQS = [
   { q: 'Is a deposit required to secure my booking?', a: 'Yes, a 50% deposit is required to confirm your appointment. This deposit is deducted from your total treatment cost on the day. Banking details are provided during the booking process.' },
   { q: 'What should I bring on the day of my appointment?', a: 'Please bring your proof of deposit payment (screenshot or receipt is fine), arrive 5-10 minutes early, and come with a clean face if possible for facial treatments.' },
   { q: 'Can I reschedule my appointment?', a: 'Yes, we ask for at least 24 hours notice for rescheduling to avoid losing your deposit. Contact us via WhatsApp or phone and we\'ll find the next available slot for you.' },
-  { q: 'What products do you use?', a: 'We use only premium, medical-grade products and internationally recognised brands. All our products are suited for South African skin types and carefully selected for safety and efficacy.' },
+  { q: 'What products do you use?', a: 'Contact therapist for best recommendations. All our products are suited for South African skin types and carefully selected for safety and efficacy.' },
   { q: 'Are your therapists qualified?', a: 'Absolutely. All our therapists are fully certified and hold relevant qualifications in aesthetic therapy. We invest in ongoing training to ensure you receive the most advanced treatments available.' },
-  { q: 'How long do treatments take?', a: 'Treatment durations vary depending on the service. Facials typically take 60-90 minutes, lash extensions 90-120 minutes, and brow treatments 45-60 minutes. Exact durations are listed on each service.' },
+  { q: 'How long do treatments take?', a: 'Treatment durations vary depending on the service. Facials typically take 30-60 minutes, lash extensions 20-40 minutes, and brow treatments 20-40 minutes. Exact durations are listed on each service.' },
 ];
 
 export default function FAQ() {

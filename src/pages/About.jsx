@@ -6,9 +6,8 @@ import { Award, Heart, Sparkles, Shield } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const TEAM = [
-  { name: 'Thandi Mokoena', role: 'Founder & Lead Aesthetician', bio: 'Certified aesthetic therapist with 8+ years of experience. Specialises in advanced skin treatments and aesthetic procedures.', initials: 'TM' },
-  { name: 'Lerato Dlamini', role: 'Senior Lash & Brow Artist', bio: 'Expert lash technician and brow specialist. Trained in Korea and London in the latest lash techniques.', initials: 'LD' },
-  { name: 'Nomsa Sithole', role: 'Skin Therapist', bio: 'Specialist in corrective skincare and microneedling. Passionate about transforming challenging skin conditions.', initials: 'NS' },
+  { name: 'Sharon Matshimbwe', role: 'Co-Founder', bio: 'Specialises in advanced skin treatments and aesthetic procedures.', initials: 'SM' },
+  { name: 'Taki Alie', role: 'Co-Founder', bio: 'Expert lash technician and brow specialist.Specialises in advanced skin treatments and aesthetic procedures. With 6+ years experiences.', initials: 'TA' },
 ];
 
 const VALUES = [
@@ -32,7 +31,7 @@ export default function About() {
       <div className="pt-40 pb-20 bg-gradient-to-br from-cream via-white to-blush/10 px-6 text-center">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
           <span className="section-label">Our Story</span>
-          <h1 className="section-title">About La Bella</h1>
+          <h1 className="section-title">About La Bella Aesthetics</h1>
           <div className="gold-divider" />
         </motion.div>
       </div>
@@ -42,19 +41,30 @@ export default function About() {
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-              <div className="relative aspect-square bg-gradient-to-br from-rose/10 to-gold/10 border border-gold/20 flex items-center justify-center">
-                <div className="text-center p-10">
-                  <div className="w-28 h-28 rounded-full border-2 border-gold/40 flex items-center justify-center mx-auto mb-6">
-                    <span className="font-display text-4xl text-rose italic">LB</span>
-                  </div>
-                  <p className="font-display text-5xl text-charcoal">2019</p>
-                  <p className="text-sm text-warm-gray font-body mt-2 tracking-widest uppercase">Est. Polokwane</p>
-                </div>
-                <div className="absolute top-5 left-5 w-10 h-10 border-t-2 border-l-2 border-gold/40" />
-                <div className="absolute top-5 right-5 w-10 h-10 border-t-2 border-r-2 border-gold/40" />
-                <div className="absolute bottom-5 left-5 w-10 h-10 border-b-2 border-l-2 border-gold/40" />
-                <div className="absolute bottom-5 right-5 w-10 h-10 border-b-2 border-r-2 border-gold/40" />
-              </div>
+              <div className="relative aspect-square border border-gold/20 overflow-hidden flex items-center justify-center shadow-sm">
+  
+  {/* 👇 1. THE BACKGROUND IMAGE 👇 */}
+  <img 
+    src="/public/images/coach.jpg" 
+    alt="La Bella Aesthetic Est 2019" 
+    className="absolute inset-0 w-full h-full object-cover"
+  />
+
+  {/* 2. THE OVERLAY (Softens the image so text is readable) */}
+  <div className="absolute inset-0 bg-white/50 bg-gradient-to-br from-rose/20 to-gold/20 backdrop-blur-[2px]" />
+
+  {/* 3. CENTER CONTENT (Added z-10 to stay on top) */}
+  <div className="text-center p-10 z-10">
+    <p className="font-display text-5xl text-charcoal">2019</p>
+    <p className="text-sm text-charcoal font-body mt-2 tracking-widest uppercase font-medium">Est. Polokwane</p>
+  </div>
+
+  {/* 4. CORNER ORNAMENTS (Added z-10 to stay on top) */}
+  <div className="absolute top-5 left-5 w-10 h-10 border-t-2 border-l-2 border-gold/70 z-10" />
+  <div className="absolute top-5 right-5 w-10 h-10 border-t-2 border-r-2 border-gold/70 z-10" />
+  <div className="absolute bottom-5 left-5 w-10 h-10 border-b-2 border-l-2 border-gold/70 z-10" />
+  <div className="absolute bottom-5 right-5 w-10 h-10 border-b-2 border-r-2 border-gold/70 z-10" />
+</div>
             </motion.div>
 
             <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>

@@ -6,12 +6,110 @@ import { db } from '../../lib/firebase';
 import { ArrowRight } from 'lucide-react';
 
 const FALLBACK_SERVICES = [
-  { id: '1', name: 'Advanced Facials', description: 'Customised facial treatments targeting your unique skin concerns for a radiant, healthy glow.', price: 650, duration: 60, category: 'Facials' },
-  { id: '2', name: 'Microneedling', description: 'Stimulate collagen production and improve skin texture with our precision microneedling treatment.', price: 1200, duration: 90, category: 'Skin Treatments' },
-  { id: '3', name: 'Chemical Peels', description: 'Resurface your skin and reveal a brighter, more youthful complexion with our tailored chemical peels.', price: 850, duration: 60, category: 'Skin Treatments' },
-  { id: '4', name: 'Lash Extensions', description: 'Enhance your natural lashes with our premium extensions for effortlessly glamorous eyes.', price: 750, duration: 120, category: 'Lashes' },
-  { id: '5', name: 'Brow Design', description: 'Expertly shaped and defined brows to frame your face and enhance your natural features.', price: 350, duration: 45, category: 'Brows' },
-  { id: '6', name: 'Aesthetic Treatments', description: 'Comprehensive aesthetic procedures to address specific concerns and enhance your natural beauty.', price: 1500, duration: 90, category: 'Aesthetic' },
+  { 
+    id: '1', 
+    name: 'Cavitation (Fat Reduction)', 
+    description: 'Non-invasive body contouring treatment to break down fat cells and reshape your body.', 
+    price: 250, 
+    duration: 20, 
+    category: 'Body Contouring' 
+  },
+  { 
+    id: '2', 
+    name: 'Laser Lipo (Fat Reduction)', 
+    description: 'Advanced laser technology to target and reduce stubborn fat deposits for a slimmer silhouette.', 
+    price: 250, 
+    duration: 20, 
+    category: 'Body Contouring' 
+  },
+  { 
+    id: '3', 
+    name: 'Skin Tightening', 
+    description: 'Firm and lift sagging skin to restore a youthful, toned appearance to your face or body.', 
+    price: 350, 
+    duration: 60, 
+    category: 'Skin Treatments' 
+  },
+  { 
+    id: '4', 
+    name: 'Permanent Hair Removal', 
+    description: 'Long-lasting hair reduction using advanced laser technology for smooth, hair-free skin.', 
+    price: 300, 
+    duration: 20, 
+    category: 'Laser Treatments' 
+  },
+  { 
+    id: '5', 
+    name: 'Massage Therapies', 
+    description: 'Relaxing and therapeutic massages to relieve tension, improve circulation, and promote wellness.', 
+    price: 550, 
+    duration: 60, 
+    category: 'Wellness' 
+  },
+  { 
+    id: '6', 
+    name: 'Skin Rejuvenation', 
+    description: 'Revitalize dull, tired skin to restore a bright, healthy, and radiant complexion.', 
+    price: 950, 
+    duration: 60, 
+    category: 'Skin Treatments' 
+  },
+  { 
+    id: '7', 
+    name: 'Laser Hair Regrowth', 
+    description: 'Stimulate hair follicles and promote natural hair growth with targeted laser therapy.', 
+    price: 350, 
+    duration: 30, 
+    category: 'Hair Treatments' 
+  },
+  { 
+    id: '8', 
+    name: 'Deep Cleaning Facial', 
+    description: 'Thorough cleansing, exfoliation, and extraction to clear pores and refresh your skin.', 
+    price: 450, 
+    duration: 30, 
+    category: 'Facials' 
+  },
+  { 
+    id: '9', 
+    name: 'Reduction of Pigmentation', 
+    description: 'Target dark spots and uneven skin tone for a clear, luminous, and balanced complexion.', 
+    price: 200, 
+    duration: 30, 
+    category: 'Skin Treatments' 
+  },
+  { 
+    id: '10', 
+    name: 'Reduction of Acne Scarring', 
+    description: 'Advanced resurfacing treatments to smooth skin texture and minimize the appearance of acne scars.', 
+    price: 200, 
+    duration: 30, 
+    category: 'Skin Treatments' 
+  },
+  { 
+    id: '11', 
+    name: 'Reduction of Spider Veins', 
+    description: 'Safely and effectively diminish the appearance of superficial spider veins for clearer skin.', 
+    price: 200, 
+    duration: 30, 
+    category: 'Laser Treatments' 
+  },
+  { 
+    id: '12', 
+    name: 'Anti-Aging & Wrinkle Reduction', 
+    description: 'Targeted aesthetic treatments to smooth fine lines and restore youthful volume to your face.', 
+    price: 450, 
+    duration: 50, 
+    category: 'Aesthetic' 
+  },
+  { 
+    id: '13', 
+    name: 'Breast/Bum Augmentation (Vacuum)', 
+    description: 'Non-surgical vacuum therapy to lift, tone, and enhance the volume of targeted areas.', 
+    price: 450, 
+    duration: 45, 
+    category: 'Body Contouring' 
+  }
 ];
 
 const CATEGORY_ICONS = {
@@ -56,7 +154,7 @@ export default function ServicesPreview() {
           <h2 className="section-title">Services Crafted for You</h2>
           <div className="gold-divider" />
           <p className="text-warm-gray font-body font-300 max-w-xl mx-auto mt-4 leading-relaxed">
-            Each treatment is personalised to your unique skin needs, combining the latest techniques with premium products for visible, lasting results.
+          Please feel free to consult on our WhatsApp line for more services. Note prices may vary based on individual needs and treatment plans.
           </p>
         </motion.div>
 

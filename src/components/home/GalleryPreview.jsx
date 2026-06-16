@@ -14,6 +14,15 @@ const PLACEHOLDER_COLORS = [
   'from-blush/30 to-gold/15',
 ];
 
+const LOCAL_IMAGES = [
+  { id: 'local1', url: '/public/images/facial.jpg', category: 'Facials', caption: 'Deep Cleaning Facial' },
+  { id: 'local2', url: '/public/images/lashes.jpg', category: 'Lashes', caption: 'Lash Extensions' },
+  { id: 'local3', url: '/public/images/skin.jpg', category: 'Skin', caption: 'Skin Rejuvenation' },
+  { id: 'local4', url: '/public/images/brows.jpg', category: 'Brows', caption: 'Brow Design' },
+  { id: 'local5', url: '/public/images/laser.jpg', category: 'Treatments', caption: 'Laser Treatments' },
+  { id: 'local6', url: '/public/images/before-after.jpg', category: 'Before/After', caption: 'Real Results' }
+];
+
 export default function GalleryPreview() {
   const [images, setImages] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -29,6 +38,9 @@ export default function GalleryPreview() {
     };
     fetch();
   }, []);
+
+  // Use Firebase images if they exist, otherwise use your local images
+  const displayImages = images.length > 0 ? images : LOCAL_IMAGES;
 
   return (
     <section className="py-28 px-6 lg:px-10 bg-white">
@@ -51,7 +63,7 @@ export default function GalleryPreview() {
 
         {/* Gallery grid */}
         <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-          {(images.length > 0 ? images : Array(6).fill(null)).map((img, i) => (
+          {displayImages.map((img, i) => (
             <motion.div
               key={img?.id || i}
               initial={{ opacity: 0, scale: 0.95 }}

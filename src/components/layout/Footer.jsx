@@ -16,6 +16,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link to="/" className="block mb-5">
+               <img src="/public/images/logo.png" alt="La Bella Logo" className="w-16 h-16 object-contain mt-1" />
               <span className="font-display text-3xl text-cream block leading-none">La Bella</span>
               <span className="text-[9px] tracking-[0.45em] text-gold uppercase font-body mt-1 block">Aesthetic</span>
             </Link>
@@ -23,7 +24,7 @@ export default function Footer() {
               {settings.tagline}. Polokwane's premier destination for luxury aesthetic treatments.
             </p>
             <div className="flex gap-4">
-              <a href={settings.instagram} target="_blank" rel="noopener noreferrer"
+              <a href="https://www.instagram.com/la_bella_aesthetic/" target="_blank" rel="noopener noreferrer"
                 className="w-9 h-9 border border-cream/20 flex items-center justify-center hover:border-gold hover:text-gold transition-all duration-300">
                 <Globe size={15} />
               </a>
@@ -63,7 +64,7 @@ export default function Footer() {
           <div>
             <h4 className="section-label text-gold mb-6">Treatments</h4>
             <ul className="space-y-3">
-              {['Facials', 'Microneedling', 'Chemical Peels', 'Lash Extensions', 'Brow Treatments', 'Skin Treatments'].map((s) => (
+              {['Cavitation(fat reduction )','Laser Lipo (fat reduction)','Skin tightening','Permanent hair removal','Massage therapies','Skin rejuvenation','Laser hair regrowth','Deep cleaning facial','Reduction of pigmentation','Reduction of acne scarring','Reduction of spider veins','Anti_Aging & wrinkle reduction','Breast/bum augmentation (vacuum)'].map((s) => (
                 <li key={s}>
                   <Link to="/services" className="text-sm text-cream/60 hover:text-gold transition-colors font-body">
                     {s}
@@ -79,18 +80,18 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex gap-3">
                 <MapPin size={15} className="text-gold flex-shrink-0 mt-0.5" />
-                <span className="text-sm font-body leading-relaxed text-cream/60">{settings.address}</span>
+                <span className="text-sm font-body leading-relaxed text-cream/60">102 Marshall St, Polokwane Central, Polokwane, 0700</span>
               </li>
               <li className="flex gap-3">
                 <Phone size={15} className="text-gold flex-shrink-0 mt-0.5" />
                 <a href={`tel:${settings.phone}`} className="text-sm font-body text-cream/60 hover:text-gold transition-colors">
-                  {settings.phone}
+                 069 563 0922 
                 </a>
               </li>
               <li className="flex gap-3">
                 <Mail size={15} className="text-gold flex-shrink-0 mt-0.5" />
                 <a href={`mailto:${settings.email}`} className="text-sm font-body text-cream/60 hover:text-gold transition-colors">
-                  {settings.email}
+                  labellaaesthetic12@gmail.com
                 </a>
               </li>
             </ul>
@@ -98,9 +99,11 @@ export default function Footer() {
             {/* Hours snippet */}
             <div className="mt-6 pt-6 border-t border-cream/10">
               <p className="section-label mb-3">Mon – Fri</p>
-              <p className="text-sm text-cream/60 font-body">09:00 – 17:00</p>
+              <p className="text-sm text-cream/60 font-body">08:00 – 17:00</p>
               <p className="section-label mt-3 mb-1">Saturday</p>
-              <p className="text-sm text-cream/60 font-body">09:00 – 13:00</p>
+              <p className="text-sm text-cream/60 font-body">08:00 – 15:00</p>
+              <p className="section-label mt-3 mb-1">Sunday</p>
+              <p className="text-sm text-cream/60 font-body">Closed</p>
             </div>
           </div>
         </div>
@@ -108,7 +111,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="border-t border-cream/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-xs text-cream/40 font-body tracking-wide">
-            © {year} La Bella Aesthetic. All rights reserved.
+            © {year} La Bella Aesthetic. All rights reserved by Dylan Ndlovu.
           </p>
           <p className="text-xs text-cream/30 font-body flex items-center gap-1.5">
             Made with <Heart size={11} className="text-rose fill-rose" /> in Polokwane, South Africa

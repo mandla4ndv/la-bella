@@ -53,14 +53,8 @@ export default function Navbar() {
         <nav className="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex flex-col items-start group">
-            <span className="font-display text-2xl text-charcoal tracking-wider leading-none group-hover:text-rose transition-colors duration-300">
-              La Bella
-            </span>
-            <span className="text-[9px] tracking-[0.45em] text-gold uppercase font-body font-500 mt-0.5">
-              Aesthetic
-            </span>
+             <img src="/public/images/logo.png" alt="La Bella Logo" className="w-16 h-16 object-contain mt-1" />
           </Link>
-
           {/* Desktop Nav */}
           <div className="hidden lg:flex items-center gap-10">
             {navLinks.map((link) => (

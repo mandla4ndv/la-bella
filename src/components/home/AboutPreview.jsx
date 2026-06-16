@@ -28,22 +28,35 @@ export default function AboutPreview() {
             className="relative"
           >
             {/* Main visual frame */}
-            <div className="relative aspect-[4/5] bg-gradient-to-br from-rose/10 via-blush/15 to-gold/10 border border-gold/20 overflow-hidden">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center p-12">
-                  <div className="w-24 h-24 rounded-full bg-gradient-to-br from-rose/20 to-gold/20 flex items-center justify-center mx-auto mb-8 border border-gold/30">
-                    <span className="font-display text-3xl text-rose italic">LB</span>
-                  </div>
-                  <p className="font-display text-2xl text-charcoal italic mb-4">Est. 2019</p>
-                  <p className="text-sm text-warm-gray font-body font-300">Polokwane, Limpopo</p>
-                </div>
-              </div>
-              {/* Corner ornaments */}
-              <div className="absolute top-6 left-6 w-10 h-10 border-t-2 border-l-2 border-gold/40" />
-              <div className="absolute top-6 right-6 w-10 h-10 border-t-2 border-r-2 border-gold/40" />
-              <div className="absolute bottom-6 left-6 w-10 h-10 border-b-2 border-l-2 border-gold/40" />
-              <div className="absolute bottom-6 right-6 w-10 h-10 border-b-2 border-r-2 border-gold/40" />
-            </div>
+            <div className="relative aspect-[4/5] border border-gold/20 overflow-hidden shadow-sm">
+  
+  {/* 👇 1. THE BACKGROUND IMAGE 👇 */}
+  <img 
+    src="public/images/face.jpg" 
+    alt="La Bella Aesthetic" 
+    className="absolute inset-0 w-full h-full object-cover"
+  />
+
+  {/* 2. THE TINT OVERLAY (Uses your original gradient + a soft white wash for readability) */}
+  <div className="absolute inset-0 bg-white/60 bg-gradient-to-br from-rose/30 via-blush/30 to-gold/30 backdrop-blur-[2px]" />
+
+  {/* 3. YOUR CENTERED CONTENT (Added z-10 to stay on top) */}
+  <div className="absolute inset-0 flex items-center justify-center z-10">
+    <div className="text-center p-12">
+      {/* Added backdrop-blur to the logo circle so it pops over the image */}
+      
+      <p className="font-display text-2xl text-charcoal italic mb-4">Est. 2019</p>
+      <p className="text-sm text-charcoal font-body font-500 tracking-wide">Polokwane, Limpopo</p>
+    </div>
+  </div>
+
+  {/* 4. CORNER ORNAMENTS (Added z-10 to stay on top) */}
+  <div className="absolute top-6 left-6 w-10 h-10 border-t-2 border-l-2 border-gold/60 z-10" />
+  <div className="absolute top-6 right-6 w-10 h-10 border-t-2 border-r-2 border-gold/60 z-10" />
+  <div className="absolute bottom-6 left-6 w-10 h-10 border-b-2 border-l-2 border-gold/60 z-10" />
+  <div className="absolute bottom-6 right-6 w-10 h-10 border-b-2 border-r-2 border-gold/60 z-10" />
+
+</div>
 
             {/* Floating accent card */}
             <motion.div

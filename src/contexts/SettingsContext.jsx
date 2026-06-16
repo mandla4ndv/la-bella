@@ -8,16 +8,16 @@ export const useSettings = () => useContext(SettingsContext);
 const DEFAULT_SETTINGS = {
   businessName: 'La Bella Aesthetic',
   tagline: 'Where Beauty Meets Artistry',
-  phone: '+27 72 000 0000',
-  email: 'hello@labellaaesthetic.co.za',
-  address: '123 Dorp Street, Polokwane, Limpopo, 0699',
-  whatsapp: '+27720000000',
-  instagram: 'https://instagram.com/labellaaesthetic',
+  phone: '+27 69 563 0922',
+  email: 'labellaaesthethis12@gmail.com',
+  address: '102 Marshall St, Polokwane Central, Polokwane, 0700',
+  whatsapp: '+27695630922',
+  instagram: 'https://www.instagram.com/la_bella_aesthetic/',
   facebook: 'https://facebook.com/labellaaesthetic',
   tiktok: 'https://tiktok.com/@labellaaesthetic',
   bankName: 'FNB',
   accountHolder: 'La Bella Aesthetic',
-  accountNumber: '62xxxxxxxxx',
+  accountNumber: '630 38829 272',
   branchCode: '250655',
   accountType: 'Cheque',
   businessHours: {
@@ -37,7 +37,7 @@ const DEFAULT_SETTINGS = {
   aboutStory: 'La Bella Aesthetic was founded with a single vision: to bring world-class aesthetic treatments to Polokwane. Our team of certified professionals combines advanced techniques with personalised care, ensuring every client leaves feeling confident and radiant.',
   aboutMission: 'To empower every client through evidence-based aesthetic treatments that enhance natural beauty, delivered in an environment of luxury, trust, and care.',
   aboutVision: 'To be the most trusted and celebrated aesthetic clinic in Limpopo, setting the standard for excellence in beauty and skincare.',
-  mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57543.36!2d29.4651!3d-23.9005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ec6782b30938be7%3A0x9b9e1e0e0e0e0e0e!2sPolokwane!5e0!3m2!1sen!2sza!4v1000000000000',
+  mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3647.184355839751!2d29.448625074094306!3d-23.91852507480858!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ec6d78f378a54f3%3A0x871af43450814e19!2s102%20Marshall%20St%2C%20Polokwane%20Central%2C%20Polokwane%2C%200700!5e0!3m2!1sen!2sza!4v1781582668391!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade',
 };
 
 export const SettingsProvider = ({ children }) => {
