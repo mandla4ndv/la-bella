@@ -18,7 +18,7 @@ export default function Layout({ children, hideFooter = false }) {
   }, [pathname]);
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen w-full overflow-x-hidden">
       <Navbar />
       <motion.main
         key={pathname}
@@ -33,4 +33,4 @@ export default function Layout({ children, hideFooter = false }) {
       {!hideFooter && <Footer />}
     </div>
   );
-}
+} 

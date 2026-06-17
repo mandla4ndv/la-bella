@@ -43,28 +43,28 @@ export default function About() {
             <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
               <div className="relative aspect-square border border-gold/20 overflow-hidden flex items-center justify-center shadow-sm">
   
-  {/* 👇 1. THE BACKGROUND IMAGE 👇 */}
-  <img 
-    src="/public/images/coach.jpg" 
-    alt="La Bella Aesthetic Est 2019" 
-    className="absolute inset-0 w-full h-full object-cover"
-  />
+                {/* 👇 1. THE BACKGROUND IMAGE 👇 */}
+                <img 
+                  src="/public/images/coach.jpg" 
+                  alt="La Bella Aesthetic Est 2019" 
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
 
-  {/* 2. THE OVERLAY (Softens the image so text is readable) */}
-  <div className="absolute inset-0 bg-white/50 bg-gradient-to-br from-rose/20 to-gold/20 backdrop-blur-[2px]" />
+                {/* 2. THE OVERLAY (Softens the image so text is readable) */}
+                <div className="absolute inset-0 bg-white/50 bg-gradient-to-br from-rose/20 to-gold/20 backdrop-blur-[2px]" />
 
-  {/* 3. CENTER CONTENT (Added z-10 to stay on top) */}
-  <div className="text-center p-10 z-10">
-    <p className="font-display text-5xl text-charcoal">2019</p>
-    <p className="text-sm text-charcoal font-body mt-2 tracking-widest uppercase font-medium">Est. Polokwane</p>
-  </div>
+                {/* 3. CENTER CONTENT (Added z-10 to stay on top) */}
+                <div className="text-center p-10 z-10">
+                  <p className="font-display text-5xl text-charcoal">2019</p>
+                  <p className="text-sm text-charcoal font-body mt-2 tracking-widest uppercase font-medium">Est. Polokwane</p>
+                </div>
 
-  {/* 4. CORNER ORNAMENTS (Added z-10 to stay on top) */}
-  <div className="absolute top-5 left-5 w-10 h-10 border-t-2 border-l-2 border-gold/70 z-10" />
-  <div className="absolute top-5 right-5 w-10 h-10 border-t-2 border-r-2 border-gold/70 z-10" />
-  <div className="absolute bottom-5 left-5 w-10 h-10 border-b-2 border-l-2 border-gold/70 z-10" />
-  <div className="absolute bottom-5 right-5 w-10 h-10 border-b-2 border-r-2 border-gold/70 z-10" />
-</div>
+                {/* 4. CORNER ORNAMENTS (Added z-10 to stay on top) */}
+                <div className="absolute top-5 left-5 w-10 h-10 border-t-2 border-l-2 border-gold/70 z-10" />
+                <div className="absolute top-5 right-5 w-10 h-10 border-t-2 border-r-2 border-gold/70 z-10" />
+                <div className="absolute bottom-5 left-5 w-10 h-10 border-b-2 border-l-2 border-gold/70 z-10" />
+                <div className="absolute bottom-5 right-5 w-10 h-10 border-b-2 border-r-2 border-gold/70 z-10" />
+              </div>
             </motion.div>
 
             <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>

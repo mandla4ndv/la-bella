@@ -101,6 +101,10 @@ export default function Contact() {
 
               {/* Social */}
               <div className="flex gap-4">
+                 <a href={settings.tiktok} target="_blank" rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-xs tracking-widest uppercase font-body text-charcoal/60 hover:text-rose transition-colors border border-gold/20 px-4 py-2.5">
+                  <Phone size={13} /> TikTok
+                </a>
                 <a href={settings.instagram} target="_blank" rel="noopener noreferrer"
                   className="flex items-center gap-2 text-xs tracking-widest uppercase font-body text-charcoal/60 hover:text-rose transition-colors border border-gold/20 px-4 py-2.5">
                   <Globe size={13} /> Instagram

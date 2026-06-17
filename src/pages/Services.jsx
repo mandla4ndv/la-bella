@@ -17,6 +17,9 @@ const FALLBACK_SERVICES = [
   { id: '6', name: 'Basic Facial with Mask/Scrub', description: 'Our standard facial elevated with a customized exfoliating scrub and nourishing mask for deeper results.', price: 400, duration: 60, category: 'Facials', active: true },
   { id: '7', name: 'Deep Cleansing Facial', description: 'Thorough cleansing, exfoliation, and extraction to clear congested pores and deeply refresh your skin.', price: 450, duration: 60, category: 'Facials', active: true },
 
+  // Initial Facials & Skin Treatments Added Back
+  { id: '51', name: 'Anti-Aging Facial', description: 'Target fine lines and loss of firmness with our potent anti-aging facial using peptide-rich serums and lifting massage techniques.', price: 450, duration: 50, category: 'Facials', active: true },
+
   // Hair Removal
   { id: '8', name: 'Hair Removal: Upper Lip & Chin', description: 'Quick and effective hair removal for the delicate upper lip and chin areas.', price: 200, duration: 30, category: 'Hair Removal', active: true },
   { id: '9', name: 'Hair Removal: Brazilian', description: 'Complete and professional hair removal for the bikini area.', price: 450, duration: 45, category: 'Hair Removal', active: true },
@@ -59,7 +62,6 @@ const FALLBACK_SERVICES = [
   // Specialized Treatments
   { id: '37', name: 'Radio Frequency: Anti-Aging', description: 'Advanced RF technology to deeply heat the skin, boost collagen, and combat signs of aging.', price: 450, duration: 50, category: 'Specialized Treatments', active: true },
   { id: '38', name: 'Radio Frequency: Wrinkle Reduction', description: 'Targeted RF treatment specifically focused on smoothing out fine lines and deeper wrinkles.', price: 450, duration: 50, category: 'Specialized Treatments', active: true },
-  { id: '39', name: 'Bedroom Vitality (External)', description: 'Specialized rejuvenation treatment for the labia majora.', price: 600, duration: 30, category: 'Specialized Treatments', active: true },
   { id: '40', name: 'Reduction of Scarring & Stretch Marks', description: 'Advanced resurfacing to fade stretch marks and scars. (Price is per area).', price: 400, duration: 30, category: 'Specialized Treatments', active: true },
   { id: '41', name: 'Laser Hair Regrowth', description: 'Stimulate dormant hair follicles and encourage natural hair regrowth using laser therapy.', price: 180, duration: 30, category: 'Specialized Treatments', active: true },
 
@@ -71,10 +73,29 @@ const FALLBACK_SERVICES = [
   { id: '46', name: 'Hot Stone Massage (Full Body - 90 Min)', description: 'Heated stones are used alongside massage techniques to deeply relax muscles and ease stiffness.', price: 700, duration: 90, category: 'Massages', active: true },
   { id: '47', name: 'Hot Stone Massage: Back & Neck', description: 'Targeted hot stone therapy to release deep knots and tension in the back and neck.', price: 400, duration: 30, category: 'Massages', active: true },
   { id: '48', name: 'Indian Massage (30 Min)', description: 'A traditional, invigorating 30-minute massage technique to balance energy and relieve stress.', price: 300, duration: 30, category: 'Massages', active: true },
-  { id: '49', name: 'Indian Massage (60 Min)', description: 'An extended, immersive 60-minute traditional Indian massage experience.', price: 450, duration: 60, category: 'Massages', active: true }
+  { id: '49', name: 'Indian Massage (60 Min)', description: 'An extended, immersive 60-minute traditional Indian massage experience.', price: 450, duration: 60, category: 'Massages', active: true },
+
+  // Initial Lashes & Brows Added Back
+  { id: '55', name: 'Classic Lash Extensions', description: 'Natural-looking individual lash extensions for an effortless, wide-eyed effect. Long-lasting and low maintenance.', price: 200, duration: 20, category: 'Lashes', active: true },
+  { id: '56', name: 'Volume Lash Extensions', description: 'Luxurious volume fans for dramatic, full lashes. Perfect for a glamorous, statement look.', price: 950, duration: 150, category: 'Lashes', active: true },
+  { id: '57', name: 'Lash Lift & Tint', description: 'Semi-permanent curl and darkening of your natural lashes. No extensions required — just beautifully lifted lashes.', price: 200, duration: 30, category: 'Lashes', active: true },
+  { id: '58', name: 'Brow Design & Tint', description: 'Expert shaping using a mix of waxing and threading, followed by tinting for defined, natural-looking brows.', price: 350, duration: 45, category: 'Brows', active: true },
+  { id: '59', name: 'Brow Lamination', description: 'Straighten and set brow hairs in your desired shape for full, fluffy, "soap brow" effect that lasts 6-8 weeks.', price: 480, duration: 60, category: 'Brows', active: true }
 ];
 
-const CATEGORIES = ['All', 'Facials', 'Skin Treatments', 'Lashes', 'Brows', 'Aesthetic'];
+const CATEGORIES = [
+  'All', 
+  'Facials', 
+  'Lashes', 
+  'Brows', 
+  'Hair Removal', 
+  'IPL Treatments', 
+  'Slimming Treatments', 
+  'Body Contouring', 
+  'Skin Tightening', 
+  'Specialized Treatments', 
+  'Massages'
+];
 
 export default function Services() {
   const [services, setServices] = useState([]);
