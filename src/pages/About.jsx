@@ -45,7 +45,7 @@ export default function About() {
   
                 {/* 👇 1. THE BACKGROUND IMAGE 👇 */}
                 <img 
-                  src="/public/images/coach.jpg" 
+                  src="/images/coach.jpg" 
                   alt="La Bella Aesthetic Est 2019" 
                   className="absolute inset-0 w-full h-full object-cover"
                 />
