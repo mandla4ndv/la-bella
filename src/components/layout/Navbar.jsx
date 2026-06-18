@@ -53,7 +53,7 @@ export default function Navbar() {
         <nav className="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex flex-col items-start group">
-             <img src="/public/images/logo.png" alt="La Bella Logo" className="w-16 h-16 object-contain mt-1" />
+             <img src="/images/logo.png" alt="La Bella Logo" className="w-16 h-16 object-contain mt-1" />
           </Link>
           {/* Desktop Nav */}
           <div className="hidden lg:flex items-center gap-10">
