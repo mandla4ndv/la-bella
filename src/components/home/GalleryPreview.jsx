@@ -15,12 +15,12 @@ const PLACEHOLDER_COLORS = [
 ];
 
 const LOCAL_IMAGES = [
-  { id: 'local1', url: '/public/images/facial.jpg', category: 'Facials', caption: 'Deep Cleaning Facial' },
-  { id: 'local2', url: '/public/images/lashes.jpg', category: 'Lashes', caption: 'Lash Extensions' },
-  { id: 'local3', url: '/public/images/skin.jpg', category: 'Skin', caption: 'Skin Rejuvenation' },
-  { id: 'local4', url: '/public/images/brows.jpg', category: 'Brows', caption: 'Brow Design' },
-  { id: 'local5', url: '/public/images/laser.jpg', category: 'Treatments', caption: 'Laser Treatments' },
-  { id: 'local6', url: '/public/images/before-after.jpg', category: 'Before/After', caption: 'Real Results' }
+  { id: 'local1', url: '/images/facial.jpg', category: 'Facials', caption: 'Deep Cleaning Facial' },
+  { id: 'local2', url: '/images/lashes.jpg', category: 'Lashes', caption: 'Lash Extensions' },
+  { id: 'local3', url: '/images/skin.jpg', category: 'Skin', caption: 'Skin Rejuvenation' },
+  { id: 'local4', url: '/images/brows.jpg', category: 'Brows', caption: 'Brow Design' },
+  { id: 'local5', url: '/images/laser.jpg', category: 'Treatments', caption: 'Laser Treatments' },
+  { id: 'local6', url: '/images/before-after.jpg', category: 'Before/After', caption: 'Real Results' }
 ];
 
 export default function GalleryPreview() {

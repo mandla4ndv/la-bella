@@ -16,7 +16,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link to="/" className="block mb-5">
-               <img src="/public/images/logo.png" alt="La Bella Logo" className="w-16 h-16 object-contain mt-1" />
+               <img src="/images/logo.png" alt="La Bella Logo" className="w-16 h-16 object-contain mt-1" />
               <span className="font-display text-3xl text-cream block leading-none">La Bella</span>
               <span className="text-[9px] tracking-[0.45em] text-gold uppercase font-body mt-1 block">Aesthetic</span>
             </Link>
