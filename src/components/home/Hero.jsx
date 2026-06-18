@@ -116,7 +116,7 @@ export default function Hero() {
   
   {/* 2. THE BACKGROUND IMAGE */}
   <img 
-    src="public/images/desk.jpg" 
+    src="/images/desk.jpg" 
     alt="Aesthetic Background" 
     className="absolute inset-0 w-full h-full object-cover" 
   />

@@ -32,7 +32,7 @@ export default function AboutPreview() {
   
   {/* 👇 1. THE BACKGROUND IMAGE 👇 */}
   <img 
-    src="public/images/face.jpg" 
+    src="/images/face.jpg" 
     alt="La Bella Aesthetic" 
     className="absolute inset-0 w-full h-full object-cover"
   />
